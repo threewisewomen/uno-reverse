@@ -33,6 +33,7 @@ public class Program
         Console.WriteLine("6. Fields");
         Console.WriteLine("7. Vectors");
         Console.WriteLine("8. Matrices");
+        Console.WriteLine("9. Lists");
 
         Console.WriteLine("************************************************");
 
@@ -52,6 +53,7 @@ public class Program
             case 6: program.RunFields(); break;
             case 7: program.RunVectors(); break;
             case 8: program.RunMatrixRank(); break;
+            case 9: program.RunLists(); break;
 
             default: Console.WriteLine("Enter Valid Choice"); break;
         }
@@ -294,6 +296,49 @@ public class Program
         Console.WriteLine($"LHS {multiplypower} = RHS {multiplypowerloop}");
 
 
+    }
+
+    public void RunLists()
+    {
+        Console.WriteLine("Enter a positive integer for length n");
+        int n = int.Parse(Console.ReadLine());
+        List<int> F = new List<int>();
+
+        Console.WriteLine("Enter the Elements for F of length n");
+        for(int i = 1; i <= n; i++)
+        {
+            Console.WriteLine($"Enter {i} element");
+            int x = int.Parse(Console.ReadLine());
+            F.Add(x);
+        }
+
+        Console.WriteLine("Search element if it exists");
+        int k = int.Parse(Console.ReadLine());
+
+        int result = Lists.SearchInList(F, k);
+
+        if(result == -1) 
+        {
+            Console.WriteLine("Does not exist");
+        }
+
+        List<int> sortedList = Lists.SortList(F);
+        foreach (var item in sortedList)
+        {
+            Console.WriteLine(item);
+        }
+        Console.WriteLine("lets add 2 lists");
+        Console.WriteLine("Let List X be 1,3,5,7,9");
+        Console.WriteLine("Let List Y be 2,4,6,8,10");
+
+        List<int> X = new List<int>{ 1,3,5,7,9};
+        List<int> Y = new List<int> { 2, 4, 6, 8, 10 };
+
+        List<int> summedList = Lists.AddList(X, Y);
+        foreach (var item in summedList)
+        {
+            Console.WriteLine(item);
+        }
     }
 }
 
