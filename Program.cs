@@ -305,7 +305,7 @@ public class Program
         List<int> F = new List<int>();
 
         Console.WriteLine("Enter the Elements for F of length n");
-        for(int i = 1; i <= n; i++)
+        for (int i = 1; i <= n; i++)
         {
             Console.WriteLine($"Enter {i} element");
             int x = int.Parse(Console.ReadLine());
@@ -317,12 +317,13 @@ public class Program
 
         int result = Lists.SearchInList(F, k);
 
-        if(result == -1) 
+        if (result == -1)
         {
             Console.WriteLine("Does not exist");
         }
 
         List<int> sortedList = Lists.SortList(F);
+        List<int> scalarMul = Lists.ScalarMultiply(F, k);
         foreach (var item in sortedList)
         {
             Console.WriteLine(item);
@@ -331,11 +332,16 @@ public class Program
         Console.WriteLine("Let List X be 1,3,5,7,9");
         Console.WriteLine("Let List Y be 2,4,6,8,10");
 
-        List<int> X = new List<int>{ 1,3,5,7,9};
+        List<int> X = new List<int> { 1, 3, 5, 7, 9 };
         List<int> Y = new List<int> { 2, 4, 6, 8, 10 };
 
         List<int> summedList = Lists.AddList(X, Y);
         foreach (var item in summedList)
+        {
+            Console.WriteLine(item);
+        }
+        Console.WriteLine($"Scalar Multiplication of List F and {k}");
+        foreach (var item in scalarMul)
         {
             Console.WriteLine(item);
         }

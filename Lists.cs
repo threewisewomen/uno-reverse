@@ -25,7 +25,7 @@ namespace uno_reverse
         {
             int cunter = 0;
             int temp = 0;
-            for(int j  = 0; j < F.Count;j++)
+            for (int j = 0; j < F.Count; j++)
             {
                 for (int i = 0; i < F.Count; i++)
                 {
@@ -57,6 +57,17 @@ namespace uno_reverse
             return sumList;
         }
 
+        public static List<int> ScalarMultiply(List<int> X, int Y)
+        {
+            int mul = 0;
+            List<int> scalrMul = new List<int>();
+            foreach (int i in X)
+            {
+                mul = i*Y;
+                scalrMul.Add(mul);
+            }
+            return scalrMul;
+        }
     }
 
 }
