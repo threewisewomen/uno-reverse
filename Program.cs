@@ -34,7 +34,8 @@ public class Program
         Console.WriteLine("7. Vectors");
         Console.WriteLine("8. Matrices");
         Console.WriteLine("9. Lists");
-
+        Console.WriteLine("10. Magic Sqaure");
+        Console.WriteLine("11. Traverse Diagonal");
         Console.WriteLine("************************************************");
 
 
@@ -54,6 +55,8 @@ public class Program
             case 7: program.RunVectors(); break;
             case 8: program.RunMatrixRank(); break;
             case 9: program.RunLists(); break;
+            case 10: program.RunMagicSquare(); break;
+            case 11: program.RunTraverseDiagonal(); break;
 
             default: Console.WriteLine("Enter Valid Choice"); break;
         }
@@ -345,6 +348,32 @@ public class Program
         {
             Console.WriteLine(item);
         }
+    }
+
+    public void RunMagicSquare()
+    {
+        //Console.WriteLine("Enter the Square Dimension M ..... where the Square is M x M");
+        //int m;
+        //while (!int.TryParse(Console.ReadLine(), out m) || m < 0)
+        //{
+        //    Console.WriteLine("Enter a valid dimension");
+        //}
+        //int magicsum = MagicSquare.MagicSum(m);
+        //Console.WriteLine($"the magic sum is  {magicsum}");
+        Console.WriteLine("DURER MAGIC SQUARE");
+
+        int[,] matrix = MagicSquare.DurerMagicSquare();
+        MagicSquare.PrintMatrix(matrix);
+
+    }
+
+    public void RunTraverseDiagonal()
+    {
+        Console.WriteLine("Enter the number x for dimension of Square matrix");
+        int num = int.Parse(Console.ReadLine());
+        //DiagonalTraverse.DiagonalTraversev1(num);
+        //DiagonalTraverse.DiagonalTraversalv2(num); DiagonalTraversalv3
+        DiagonalTraverse.DiagonalTraversalv3(num);
     }
 }
 
