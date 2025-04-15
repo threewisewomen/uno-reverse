@@ -36,6 +36,7 @@ public class Program
         Console.WriteLine("9. Lists");
         Console.WriteLine("10. Magic Sqaure");
         Console.WriteLine("11. Traverse Diagonal");
+        Console.WriteLine("12. Tetraktys");
         Console.WriteLine("************************************************");
 
 
@@ -57,6 +58,7 @@ public class Program
             case 9: program.RunLists(); break;
             case 10: program.RunMagicSquare(); break;
             case 11: program.RunTraverseDiagonal(); break;
+            case 12: program.RunTetraktys(); break;
 
             default: Console.WriteLine("Enter Valid Choice"); break;
         }
@@ -374,6 +376,12 @@ public class Program
         //DiagonalTraverse.DiagonalTraversev1(num);
         //DiagonalTraverse.DiagonalTraversalv2(num); DiagonalTraversalv3
         DiagonalTraverse.DiagonalTraversalv3(num);
+    }
+
+    public void RunTetraktys()
+    {
+        Tetraktys tetraktys = new Tetraktys();
+        tetraktys.TetraktysMain();
     }
 }
 
