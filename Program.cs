@@ -37,6 +37,7 @@ public class Program
         Console.WriteLine("10. Magic Sqaure");
         Console.WriteLine("11. Traverse Diagonal");
         Console.WriteLine("12. Tetraktys");
+        Console.WriteLine("13. Aristotle Square Matrix");
         Console.WriteLine("************************************************");
 
 
@@ -59,6 +60,7 @@ public class Program
             case 10: program.RunMagicSquare(); break;
             case 11: program.RunTraverseDiagonal(); break;
             case 12: program.RunTetraktys(); break;
+            case 13: program.RunAristotleSquareNumber(); break;
 
             default: Console.WriteLine("Enter Valid Choice"); break;
         }
@@ -382,6 +384,12 @@ public class Program
     {
         Tetraktys tetraktys = new Tetraktys();
         tetraktys.TetraktysMain();
+    }
+
+    public void RunAristotleSquareNumber()
+    {
+        AritoteSquareMatrix aritoteSquareMatrix = new AritoteSquareMatrix(_matrixOperations);
+        aritoteSquareMatrix.AritoteSquareMatrixMain();
     }
 }
 
