@@ -39,6 +39,8 @@ public class Program
         Console.WriteLine("12. Tetraktys");
         Console.WriteLine("13. Aristotle Square Matrix");
         Console.WriteLine("14. Aristotle Oblong Matrix");
+        Console.WriteLine("15. Circle Of Fifths");
+
         Console.WriteLine("************************************************");
 
 
@@ -63,6 +65,7 @@ public class Program
             case 12: program.RunTetraktys(); break;
             case 13: program.RunAristotleSquareNumber(); break;
             case 14: program.RunAristotleOblongMatrix(); break;
+            case 15: program.RunCircleOfFifths(); break;
 
             default: Console.WriteLine("Enter Valid Choice"); break;
         }
@@ -398,6 +401,12 @@ public class Program
     {
         AristotleOblongMatrix aritoteOblongMatrix = new AristotleOblongMatrix(_matrixOperations);
         aritoteOblongMatrix.AritoteOblongMatrixMain();
+    }
+
+    public void RunCircleOfFifths()
+    {
+        CircleOfFifths circleOfFifths = new CircleOfFifths();
+        circleOfFifths.CircleOfFifthsMain();
     }
 }
 
