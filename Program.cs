@@ -38,6 +38,7 @@ public class Program
         Console.WriteLine("11. Traverse Diagonal");
         Console.WriteLine("12. Tetraktys");
         Console.WriteLine("13. Aristotle Square Matrix");
+        Console.WriteLine("14. Aristotle Oblong Matrix");
         Console.WriteLine("************************************************");
 
 
@@ -61,6 +62,7 @@ public class Program
             case 11: program.RunTraverseDiagonal(); break;
             case 12: program.RunTetraktys(); break;
             case 13: program.RunAristotleSquareNumber(); break;
+            case 14: program.RunAristotleOblongMatrix(); break;
 
             default: Console.WriteLine("Enter Valid Choice"); break;
         }
@@ -390,6 +392,12 @@ public class Program
     {
         AritoteSquareMatrix aritoteSquareMatrix = new AritoteSquareMatrix(_matrixOperations);
         aritoteSquareMatrix.AritoteSquareMatrixMain();
+    }
+
+    public void RunAristotleOblongMatrix()
+    {
+        AristotleOblongMatrix aritoteOblongMatrix = new AristotleOblongMatrix(_matrixOperations);
+        aritoteOblongMatrix.AritoteOblongMatrixMain();
     }
 }
 
